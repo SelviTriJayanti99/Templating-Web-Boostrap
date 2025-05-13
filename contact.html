@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Business Casual - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+  body {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+  }
+
+  body.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+    </head>
+    <script>
+  window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+  });
+</script>
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    document.querySelectorAll(".bg-faded").forEach(el => {
+        el.classList.toggle("dark-mode");
+    });
+
+    // Simpan preferensi pengguna
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+    } else {
+        localStorage.setItem("darkMode", "disabled");
+    }
+}
+
+// Aktifkan kembali dark mode jika sudah dipilih sebelumnya
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("darkMode") === "enabled") {
+        toggleDarkMode();
+    }
+});
+</script>
+
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Skillora Class</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About Us</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Courses</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Jadwal Kelas</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">Skillora Class</span>
+                <span class="site-heading-lower">Online Course by Selvi</span>
+            </h1>
+        </header>
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner bg-faded text-center rounded">
+                        <h2 class="section-heading mb-5">
+                            <body style="background-image: url('assets/img/bg-03.jpg'); background-size: cover;"></body>
+                            <span class="section-heading-upper">Contact Us</span>
+                            <span class="section-heading-lower">Get In Touch</span>
+                        </h2>
+                        <p class="mb-5" id="form-description">
+                        </p> Yuk, isi formulir berikut ini agar kami bisa segera membantu Anda dengan layanan terbaik!
+                        </p>
+
+                        <!-- Formulir Kontak -->
+<!-- Formulir Kontak -->
+<form id="contact-form" action="#" method="POST" onsubmit="showConfirmation(event)">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="name">Nama Anda</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="email">Email Anda</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="telepon">Nomor Handphone</label>
+                <input type="telepon" class="form-control" id="telepon" name="telepon" required>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="message">Pesan Anda</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Kirim Pesan</button>
+</form>
+
+<!-- Pesan Konfirmasi -->
+<div id="confirmation-message" style="display: none; margin-top: 2rem;">
+    <i class="fas fa-check-circle" id="checkmark-icon" style="color: green; font-size: 48px;"></i>
+    <p class="mt-3">✅ Pesan Anda telah terkirim!</p>
+    <p>Terima kasih, kami akan segera menghubungi Anda.</p>
+</div>
+
+    </section>
+
+    <footer class="footer text-faded text-center py-5">
+        <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+function showConfirmation(event) {
+    event.preventDefault(); // Hindari reload halaman
+
+    // Sembunyikan form dan teks deskripsi
+    document.getElementById("contact-form").style.display = "none";
+
+    const desc = document.getElementById("form-description");
+    if (desc) desc.style.display = "none";
+
+    // Tampilkan pesan konfirmasi dengan transisi
+    const confirmation = document.getElementById("confirmation-message");
+    confirmation.style.display = "block";
+    confirmation.style.opacity = 0;
+    confirmation.style.transition = "opacity 0.8s ease";
+    setTimeout(() => {
+        confirmation.style.opacity = 1;
+    }, 50);
+}
+</script>
+
+</body>
+</html>

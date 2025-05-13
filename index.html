@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>skillora Class by Selvi</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+       <link href="css/styles.css" rel="stylesheet" />
+            <style>
+            .btn-animated {
+                position: relative;
+                background-color: #dba15b !important;
+                border: none;
+                transition: all 0.3s ease;
+                animation: bounce 1.5s infinite;
+            }
+
+            .btn-animated::after {
+                content: " ➔";
+                position: absolute;
+                opacity: 0;
+                right: -20px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all 0.3s ease;
+                font-size: 18px;
+            }
+
+            .btn-animated:hover {
+                background-color: #c28743 !important;
+                padding-right: 36px;
+            }
+
+            .btn-animated:hover::after {
+                opacity: 1;
+                right: 10px;
+            }
+
+            @keyframes bounce {
+                0%, 100% {
+                transform: translateY(0);
+                }
+                50% {
+                transform: translateY(-5px);
+                }
+            }
+            </style>
+            </head>
+            <style>
+            body {
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+        }
+
+            body.dark-mode {
+                background-color: #121212;
+                color: #ffffff;
+            }
+            .bg-faded.dark-mode {
+                background-color: #1e1e1e !important;
+            }
+            </style>
+
+                </head>
+            <script>
+            function toggleDarkMode() {
+                document.body.classList.toggle("dark-mode");
+                document.querySelectorAll(".bg-faded").forEach(el => {
+                    el.classList.toggle("dark-mode");
+                });
+            }
+            </script>
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    document.querySelectorAll(".bg-faded").forEach(el => {
+        el.classList.toggle("dark-mode");
+    });
+
+    // Simpan preferensi pengguna
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+    } else {
+        localStorage.setItem("darkMode", "disabled");
+    }
+}
+
+// Aktifkan kembali dark mode jika sudah dipilih sebelumnya
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("darkMode") === "enabled") {
+        toggleDarkMode();
+    }
+});
+</script>
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    document.querySelectorAll(".bg-faded").forEach(el => {
+        el.classList.toggle("dark-mode");
+    });
+
+    // Tambahkan dark mode ke navbar dan footer
+    document.querySelectorAll(".navbar, .footer").forEach(el => {
+        el.classList.toggle("dark-mode");
+    });
+
+    // Simpan preferensi pengguna
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
+}
+
+// Aktifkan dark mode saat halaman dimuat jika sebelumnya dipilih
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("darkMode") === "enabled") {
+        toggleDarkMode();
+    }
+});
+</script>
+
+                <body>
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Skillora Class</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+               <button onclick="toggleDarkMode()" class="btn btn-secondary btn-sm">Toggle Dark Mode</button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">About Us</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">Courses</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">Jadwal Kelas</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+               <span class="site-heading-upper text-primary mb-3">Skillora Class</span>
+                <span class="site-heading-lower">Online Course by Selvi</span>
+            </h1>
+        </header>
+        <section class="page-section clearfix">
+            <div class="container">
+                <div class="intro">
+                    <body style="background-image: url('assets/img/bg-03.jpg'); background-size: cover;">
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/foto-010.jpg" alt="..." />
+                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Online Course</span>
+                            <span class="section-heading-lower">Master Skill</span>
+                        </h2>
+                        <p class="mb-3">Unlock your potential with courses designed to guide you step-by-step. Master new skills at your own pace, from anywhere, anytime. Start your learning journey today</p>
+                        <div class="intro-button mx-auto">
+                        <a class="btn btn-primary btn-xl btn-animated" href="about.html">Visit Us Today!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper">Our Hope</span>
+                                <span class="section-heading-lower">To You</span>
+                            </h2>
+                            <p class="mb-0">We hope that every step of your learning journey with us is an enjoyable, rewarding, and meaningful experience. With well-curated materials and on-call support, we want to help you grow and achieve your personal or professional goals. If there’s anything you’re not satisfied with, let us know—we’re here to listen and do our best to improve your learning experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
